@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,12 +20,11 @@ namespace ConsoleApplication1._2
         x = Convert.ToDouble(Console.ReadLine());
         Console.WriteLine("Введите ординату точки: ");
         y = Convert.ToDouble(Console.ReadLine());
-        r=Math.Pow(x, 2) + Math.Pow(y, 2);
+        r=Math.Pow((Math.Pow(x, 2) + Math.Pow(y, 2)),0.5);
         
 
         if (x>=0){
-            if (y>=-1 && y<=0)
-             if (r==1)
+            if (y >= -1 && y <= 0 && r <= 1)
        Console.WriteLine(inside);
             else Console.WriteLine(outside); }
         else if(x<=0)
